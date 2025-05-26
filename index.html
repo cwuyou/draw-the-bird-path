@@ -148,6 +148,7 @@
             padding: 40px;
             margin-bottom: 40px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            scroll-margin-top: 80px; /* 添加滚动偏移量，考虑固定头部的高度 */
         }
 
         h2 {
@@ -240,6 +241,7 @@
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease;
+            cursor: pointer;
         }
 
         .footer-links a:hover {
@@ -345,6 +347,49 @@
         .cta-button:hover {
             transform: translateY(-2px);
         }
+
+        /* 新增内容样式 */
+        .content-section h3 {
+            color: #007aff;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+        }
+
+        .content-section strong {
+            color: #1d1d1f;
+        }
+
+        .content-section em {
+            color: #86868b;
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        /* 隐藏的内容区域样式 */
+        .hidden-section {
+            display: none;
+        }
+
+        .hidden-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -443,6 +488,92 @@
                 <p>Take time to study each level before drawing your first path. Identify all destinations, obstacles, and moving elements. Sometimes the most obvious route isn't the best solution – look for creative alternatives that might be more efficient or help you collect bonus items along the way. Don't be afraid to restart a level if your initial approach isn't working; experimentation is part of the fun!</p>
             </section>
 
+            <section id="privacy" class="content-section hidden-section">
+                <h2>Privacy Policy</h2>
+                <h3>Information We Collect</h3>
+                <p>Draw the Bird Path is designed with privacy in mind. We do not collect personal information or store user data on our servers. The game runs entirely in your browser.</p>
+                
+                <h3>Cookies and Local Storage</h3>
+                <p>The game may use browser local storage to save your progress and preferences locally on your device. This information never leaves your device.</p>
+                
+                <h3>Third-Party Services</h3>
+                <p>Our website may include embedded game content from trusted third-party providers. Please review their privacy policies for more information.</p>
+                
+                <h3>Updates to This Policy</h3>
+                <p>We may update this privacy policy from time to time. Any changes will be posted on this page.</p>
+                
+                <p><em>Last updated: December 2024</em></p>
+            </section>
+
+            <section id="terms" class="content-section hidden-section">
+                <h2>Terms of Service</h2>
+                <h3>Acceptance of Terms</h3>
+                <p>By playing Draw the Bird Path, you agree to these terms of service. If you disagree with any part of these terms, please do not use our game.</p>
+                
+                <h3>Use License</h3>
+                <p>You are granted a limited, non-exclusive license to play Draw the Bird Path for personal, non-commercial use.</p>
+                
+                <h3>User Conduct</h3>
+                <p>You agree not to use the game for any unlawful purpose or in any way that could damage, disable, or impair the service.</p>
+                
+                <h3>Disclaimer</h3>
+                <p>The game is provided "as is" without any warranties, expressed or implied. We do not guarantee uninterrupted or error-free operation.</p>
+                
+                <h3>Limitation of Liability</h3>
+                <p>We shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the game.</p>
+                
+                <p><em>Last updated: December 2024</em></p>
+            </section>
+
+            <section id="contact" class="content-section hidden-section">
+                <h2>Contact Us</h2>
+                <h3>Get in Touch</h3>
+                <p>We'd love to hear from you! Whether you have questions, feedback, or need support, here's how you can reach us:</p>
+                
+                <h3>Support Email</h3>
+                <p>For technical support or game-related questions:<br>
+                <strong>support@drawthebirdpath.com</strong></p>
+                
+                <h3>General Inquiries</h3>
+                <p>For general questions or feedback:<br>
+                <strong>hello@drawthebirdpath.com</strong></p>
+                
+                <h3>Business Inquiries</h3>
+                <p>For partnership or business-related matters:<br>
+                <strong>business@drawthebirdpath.com</strong></p>
+                
+                <h3>Response Time</h3>
+                <p>We typically respond to all inquiries within 24-48 hours during business days.</p>
+                
+                <p><em>Thank you for playing Draw the Bird Path!</em></p>
+            </section>
+
+            <section id="help" class="content-section hidden-section">
+                <h2>Help & Support</h2>
+                <h3>Getting Started</h3>
+                <p>New to Draw the Bird Path? Start with the tutorial levels to learn the basic mechanics of drawing paths for birds.</p>
+                
+                <h3>Common Issues</h3>
+                <p><strong>Game won't load:</strong> Try refreshing the page or clearing your browser cache. Ensure you have a stable internet connection.</p>
+                <p><strong>Touch controls not working:</strong> Make sure you're using a compatible touch device and try restarting the game.</p>
+                <p><strong>Progress not saving:</strong> Check that your browser allows local storage for this website.</p>
+                
+                <h3>Gameplay Tips</h3>
+                <p>• Draw smooth, curved paths for better bird movement<br>
+                • Study each level before drawing your first path<br>
+                • Consider bird momentum and gravity when planning routes<br>
+                • Don't be afraid to restart and try different approaches</p>
+                
+                <h3>Technical Requirements</h3>
+                <p>• Modern web browser (Chrome, Firefox, Safari, Edge)<br>
+                • JavaScript enabled<br>
+                • Stable internet connection<br>
+                • Touch screen (for mobile play)</p>
+                
+                <h3>Still Need Help?</h3>
+                <p>Contact our support team at <strong>support@drawthebirdpath.com</strong></p>
+            </section>
+
             <div class="cta-section">
                 <h2 class="cta-title">Ready to Guide the Birds?</h2>
                 <p class="cta-text">Join thousands of players in this delightful puzzle adventure</p>
@@ -454,10 +585,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-                <a href="/contact">Contact Us</a>
-                <a href="/help">Help & Support</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#help">Help & Support</a>
             </div>
             <p>&copy; 2024 Draw the Bird Path. All rights reserved. Play responsibly and enjoy!</p>
         </div>
@@ -470,6 +601,11 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
+                    // 如果是隐藏的区域，先显示它
+                    if (target.classList.contains('hidden-section')) {
+                        showSection(target.id);
+                    }
+                    
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -477,6 +613,20 @@
                 }
             });
         });
+
+        // 显示指定区域的函数
+        function showSection(sectionId) {
+            // 隐藏所有隐藏区域
+            document.querySelectorAll('.hidden-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 显示指定区域
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
 
         // Add loading animation
         window.addEventListener('load', function() {
